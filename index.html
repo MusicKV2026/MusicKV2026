@@ -83,6 +83,8 @@
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+
+  <link rel="stylesheet" href="static/css/beautified-table.css">
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -241,29 +243,22 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">MusicKV: Training-Free Music Editing via Vital Layer Selection and Time-Varying Key-Value Injection</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous ICME submission</a><sup>*</sup>,</span>
+                <!-- <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a> -->
                   </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -271,10 +266,10 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -282,11 +277,11 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/MusicKV2026/MusicKV" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -296,13 +291,13 @@
                 </span>
 
                 <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv</span> -->
                 </a>
               </span>
             </div>
@@ -314,24 +309,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -341,7 +318,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Text-to-music generation is shifting from UNet architectures to Diffusion Transformers (DiTs), but training-free editing remains challenging because homoge neous DiT blocks lack the bottlenecks that enable feature injection in UNets. In this work, we study the internal mechanisms of music DiTs under the premise that not all layers and diffusion timesteps contribute equally to structural coherence. Through layer-wise probing, we show that a sparse subset of self-attention layers acts as the primary carrier of musical form. Leveraging this insight, we propose MusicKV, a training-free editing framework for DiTs with three components: (1) vital layer selection, which identifies a compact set of structure-critical self-attention layers; (2) key–value (KV) injection, which strengthens edits while better preserving content; and (3) a time varying injection schedule, which adapts injection strength over diffusion steps to match the coarse-to-fine generative process. Experiments show that MusicKV effectively de couples content from editing attributes and significantly outperforms baselines in the trade-off between fidelity and editability.
           </p>
         </div>
       </div>
@@ -358,7 +335,7 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
+        <img src="static/images/workflow.png" alt="First research result visualization" loading="lazy"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
           First image description.
@@ -366,25 +343,11 @@
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/skip.png" alt="Second research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
@@ -399,15 +362,118 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3">Music Editing Samples</h2>
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
           
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
+          <table class="beautified-table">
+            <colgroup>
+                <col style="width: 150px;"> <!-- 第一列：文本标签 -->
+                <col style="width: 150px;"> <!-- 第二列：Input Audio -->
+                <col style="width: 250px;"> <!-- 第三列：Text Prompt -->
+                <col style="width: 150px;"> <!-- 第四列：Generated Audio -->
+            </colgroup>
+    
+            <thead>
+              <tr>
+                <th style="text-align:center;"><span style="display: inline-block; width:150px">Caption</span></th>
+                <th style="text-align:center;"><span style="display: inline-block; width:150px">Input Audio</span></th>
+                <th style="text-align:center;"><span style="display: inline-block; width:250px">Text Prompt</span></th>
+                <th style="text-align:center"><span style="display: inline-block; width:150px">Generated Audio</span></th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              
+              
+              
+
+              <!-- 一组数据 -->
+              <tr>
+                <td rowspan=2, style="vertical-align: middle; text-align: center; font-weight: 600;">Piano, Inspiring, Emotional, Epic.</td>
+                <td rowspan=2, style="vertical-align: middle;">
+                  <audio src="static/audios/inspiring-emotional-piano-music-sample.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+                <td style="vertical-align: middle; text-align: center;">
+                  Harp, Joyful, Smooth, Relaxed.
+                </td>
+                <td style="vertical-align: middle;">
+                  <audio src="static/audios/inspiring-emotional-piano-music-sample2.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="vertical-align: middle; text-align: center;">
+                  Electric guitar, Drums and Bass, Pad Synth.
+                </td>
+                <td style="vertical-align: middle;">
+                  <audio src="static/audios/inspiring-emotional-piano-music-sample3.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+              </tr>
+
+
+              <!-- 一组数据 -->
+              <tr>
+                <td style="vertical-align: middle; text-align: center; font-weight: 600;">Guitar, Gentle, Emotional.</td>
+                <td style="vertical-align: middle;">
+                  <audio src="static/audios/guitar-gentle-emotional.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+                <td style="vertical-align: middle; text-align: center;">
+                  Classical, Piano, Melancholic.
+                </td>
+                <td style="vertical-align: middle;">
+                  <audio src="static/audios/guitar-gentle-emotional-sample1.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+              </tr>
+
+
+              <!-- 一组数据 -->
+              <tr>
+                <td style="vertical-align: middle; text-align: center; font-weight: 600;">Background music, Classical Piano, Emotional.</td>
+                <td style="vertical-align: middle;">
+                  <audio src="static/audios/Background-classical_piano-emotional-sample.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+                <td style="vertical-align: middle; text-align: center;">
+                  Solo, Violin, Soft, Inspiring.
+                </td>
+                <td style="vertical-align: middle;">
+                  <audio src="static/audios/Background-classical_piano-emotional-sample1.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+              </tr>
+
+
+              <!-- 一组数据 -->
+              <tr>
+                <td style="vertical-align: middle; text-align: center; font-weight: 600;">Violin is in pain.</td>
+                <td style="vertical-align: middle;">
+                  <audio src="static/audios/violin-is-in-painsad-violin.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+                <td style="vertical-align: middle; text-align: center;">
+                  Jazz, Saxophone, Smooth and Soulful, Warm, Reedy resonance.
+                </td>
+                <td style="vertical-align: middle;">
+                  <audio src="static/audios/violin-is-in-painsad-violin-sample1.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+              </tr>
+
+
+
+              <!-- 一组数据 -->
+              <tr>
+                <td style="vertical-align: middle; text-align: center; font-weight: 600;">Clean Indie Guitar.</td>
+                <td style="vertical-align: middle;">
+                  <audio src="static/audios/clean-indie-guitar-sample.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+                <td style="vertical-align: middle; text-align: center;">
+                  Keyboard, Excited.
+                </td>
+                <td style="vertical-align: middle;">
+                  <audio src="static/audios/clean-indie-guitar-sample1.mp3" controls="" style="width: 100px; margin: 0 auto; display: block;"></audio>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+          
       </div>
     </div>
   </div>
@@ -448,48 +514,6 @@
 </section>
 <!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
 
 
   <footer class="footer">
